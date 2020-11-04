@@ -5,7 +5,7 @@ const Navbar = (props) => {
     return (
         <View style ={styles.navegacao} > 
             <Text style={styles.text1}>TODO </Text>
-            <Text style={styles.text1}>LIST</Text>
+            <Text style={styles.text2}>LIST</Text>
         </View>
     );
 };
@@ -13,7 +13,12 @@ const Navbar = (props) => {
 const styles = StyleSheet.create({
     text1: {
       color: '#ffffff',
+      fontSize: 20,
     },
+    text2: {
+        color: '#ffffff',
+        fontSize: 20,
+      },
     navegacao: {
         alignItems:'center',
         justifyContent: 'center',

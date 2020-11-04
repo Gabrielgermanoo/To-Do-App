@@ -6,16 +6,15 @@ import{
     TouchableOpacity
 
 } from 'react-native';
-
 class Tarefas extends React.Component {
-
     render(){
         return(
             <View key = {this.props.keyval} style={styles.note}>
                 <Text style={styles.tarText}>{this.props.val.date}</Text>
                 <Text style={styles.tarText}>{this.props.val.note}</Text>
+                <View style={styles.Prioridade1} /> 
                 <TouchableOpacity onPress ={this.props.deleteMethod} style = {styles.noteDelete}>
-                  <Text style={styles.noteDeleteText}>+</Text>
+                  <Text style={styles.noteDeleteText}>del</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -47,5 +46,36 @@ const styles = StyleSheet.create({
     noteDeleteText: {
         color: 'white',
     },
+    container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white'
+      },
+      Prioridade1: {
+        backgroundColor: '#ec3c1a',
+        flexDirection: 'row',
+        height: 20,
+        aspectRatio: 1,
+        left: 250,
+        bottom: 20
+      },
+      Prioridade2: {
+        backgroundColor: '#ec3c1a',
+        flexDirection: 'row',
+        height: 20,
+        aspectRatio: 1,
+        left: 250,
+        bottom: 20
+      },
+      Prioridade3: {
+        backgroundColor: '#ec3c1a',
+        flexDirection: 'row',
+        height: 20,
+        aspectRatio: 1,
+        left: 250,
+        bottom: 20
+      },
+      
 });
 export default Tarefas;
