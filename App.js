@@ -6,14 +6,16 @@ import Selecionar from './picker';
 class App extends React.Component{
 
   constructor(props){
-    super(props);
+    super(props);  
     this.state = {
 
       noteArray: [],
       noteText: '',
+      
     };
    
   }
+
   addTask(){
       if (this.state.noteText){
         var date = new Date();
@@ -23,7 +25,6 @@ class App extends React.Component{
           '/' + date.getFullYear(),
           'note': this.state.noteText
         });
-
           this.setState({noteArray: this.state.noteArray});
           this.setState({noteText: this.state.noteText});
           this.textInput.clear()

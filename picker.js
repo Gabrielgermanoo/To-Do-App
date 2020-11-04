@@ -4,7 +4,7 @@ import {Picker} from '@react-native-picker/picker'
 import App from './App'
 class Selecionar extends React.Component{
     state = {
-        opcao: ''
+        prioridade: ''
 
     }
     constructor(props){
@@ -13,11 +13,11 @@ class Selecionar extends React.Component{
 render(){
     return (
         <Picker style={styles.pickerComponent} 
-          selectedValue = {this.state.opcao}
+          selectedValue = {this.state.prioridade}
           onValueChange = {
             (itemvalor,itemindex) => 
               this.setState({
-                opcao: itemvalor
+                prioridade: itemvalor
               })
           }
           > 
@@ -32,7 +32,7 @@ render(){
 const styles = StyleSheet.create({
     pickerComponent: {
         width: 250,
-        
+        borderColor: 'gray'
       },
     });
     
